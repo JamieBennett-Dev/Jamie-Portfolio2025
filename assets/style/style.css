@@ -45,7 +45,11 @@ html {
     font-size: 30px;
     text-decoration: none;
     font-weight: 600;
-    cursor: default;
+    transition: all 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .logo span {
@@ -66,6 +70,7 @@ html {
 
 .navbar a:hover {
     border-bottom: 2px solid var(--second-color);
+    color: var(--second-color);
 }
 
 #menu-icon {
@@ -102,9 +107,28 @@ html {
     .navbar a {
         display: block;
         margin: 30px 0;
+        
     }
 
     .navbar a:hover {
         border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 45px;
+    }
+
+    .navbar {
+        padding: 10px 45px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    #menu-icon {
+        font-size: 20px;
     }
 }
