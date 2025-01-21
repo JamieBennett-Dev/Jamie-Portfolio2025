@@ -49,10 +49,10 @@ html {
 }
 
 .logo span {
-    background-image: linear-gradient(to right, var(--main-color), var(--second-color)); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    background-clip: text; 
+    background-image: linear-gradient(to right, var(--main-color), var(--second-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .navbar a {
@@ -66,4 +66,45 @@ html {
 
 .navbar a:hover {
     border-bottom: 2px solid var(--second-color);
+}
+
+#menu-icon {
+    font-size: 30px;
+    background-image: linear-gradient(to right, var(--main-color), var(--second-color)); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    background-clip: text; 
+    display: none;
+}
+
+/* Navbar breakpoints */
+@media (max-width: 1024px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 30px 120px;
+        /* glass effect */
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.25);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 30px 0;
+    }
+
+    .navbar a:hover {
+        border-bottom: none;
+    }
 }
