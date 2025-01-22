@@ -328,3 +328,104 @@ h1 small {
 .logos .marquee .track img {
     z-index: 0;
 }
+
+h2 {
+    font-size: 48px;
+    line-height: 1;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--main-color);
+    padding: 30px;
+}
+
+h2 small {
+    display: block;
+    font-weight: 70;
+    font-size: 0.5em;
+    color: black !important;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.skills .holder-green {
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .skills .holder-green {
+        flex-direction: column;
+    }
+}
+
+.skills .holder-green .left-column {
+    flex: 1;
+}
+
+.skills .holder-green .left-column ul {
+    list-style-type: none;
+    gap: 10px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+
+.skills .holder-green .left-column ul li {
+    display: inline-block;
+    background-color: var(--second-bg-color);
+    color: var(--second-text-color);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: default;
+    transition: all 0.2s ease;
+}
+
+#html {
+    background-color: #e44d25;
+}
+
+#css {
+    background-color: #214ce5;
+}
+
+#bootstrap {
+    background-color: #7409f6;
+}
+
+#javascript {
+    background-color: #f0db4f;
+    color: black;
+}
+
+#python {
+    background-color: #f2bb30;
+    color: #34678e;
+}
+
+#django {
+    background-color: #092e20;
+}
+
+#sql {
+    background-color: #00bdf2;
+}
+
+#postgresql {
+    background-color: #2f6792;
+}
+
+.skills .holder-green .right-column {
+    flex: 1;
+    color: black;
+}
+
+.skills .holder-green .right-column p {
+    margin-bottom: 20px;
+}
