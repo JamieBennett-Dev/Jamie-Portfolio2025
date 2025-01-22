@@ -391,12 +391,24 @@ h3 {
     background-color: #e44d25;
 }
 
+#html:hover {
+   transform: scale(1.05);
+}
+
 #css {
     background-color: #214ce5;
 }
 
+#css:hover {
+    transform: scale(1.05);
+}
+
 #bootstrap {
     background-color: #7409f6;
+}
+
+#bootstrap:hover {
+    transform: scale(1.05);
 }
 
 #javascript {
@@ -404,21 +416,41 @@ h3 {
     color: black;
 }
 
+#javascript:hover {
+    transform: scale(1.05);
+}
+
 #python {
     background-color: #f2bb30;
     color: #34678e;
+}
+
+#python:hover {
+    transform: scale(1.05);
 }
 
 #django {
     background-color: #092e20;
 }
 
+#django:hover {
+    transform: scale(1.05);
+}
+
 #sql {
     background-color: #00bdf2;
 }
 
+#sql:hover {
+    transform: scale(1.05);
+}
+
 #postgresql {
     background-color: #2f6792;
+}
+
+#postgresql:hover {
+    transform: scale(1.05);
 }
 
 .skills .holder-green .right-column {
