@@ -12,6 +12,7 @@
 
 html {
   overflow-x: hidden;
+  cursor: default;
 }
 
 ::-webkit-scrollbar {
@@ -279,7 +280,7 @@ h1 small {
 }
 
 @media (max-width: 768px) {
-  #wave-emoji {
+  .wave-emoji {
     display: none;
   }
   main {
