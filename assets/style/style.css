@@ -56,9 +56,12 @@ html {
   display: flex;
   justify-content: space-between;
   /* glass effect */
-  background: rgba(255, 255, 255, 0.25);
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.69);
+  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(14.5px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   /* -webkit-backdrop-filter: blur(14.5px); */
   z-index: 10;
 }
@@ -130,7 +133,11 @@ html {
 
   .navbar.active {
     display: block;
-    background: linear-gradient(to right, var(--main-color), var(--second-color));
+    background: linear-gradient(
+      to right,
+      var(--main-color),
+      var(--second-color)
+    );
     z-index: 100;
   }
 
@@ -327,184 +334,184 @@ h1 small {
 }
 
 .logos .marquee .track img {
-    z-index: 0;
+  z-index: 0;
 }
 
 h2 {
-    font-size: 48px;
-    line-height: 1;
-    margin-bottom: 10px;
-    text-align: center;
-    color: var(--main-color);
-    padding: 30px;
+  font-size: 48px;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--main-color);
+  padding: 30px;
 }
 
 h2 small {
-    display: block;
-    font-weight: 70;
-    font-size: 0.5em;
-    color: black !important;
+  display: block;
+  font-weight: 70;
+  font-size: 0.5em;
+  color: black !important;
 }
 
 h3 {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1;
-    margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .skills .holder-green {
-    background-color: var(--bg-color);
-    border-radius: 30px;
-    padding: 30px;
-    display: flex;
+  background-color: var(--bg-color);
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
 }
 
 @media (max-width: 1024px) {
-    .skills .holder-green {
-        flex-direction: column;
-    }
+  .skills .holder-green {
+    flex-direction: column;
+  }
 }
 
 .skills .holder-green .left-column {
-    flex: 1;
+  flex: 1;
 }
 
 .skills .holder-green .left-column ul {
-    list-style-type: none;
-    gap: 10px;
-    margin-right: 100px;
-    margin-bottom: 20px;
+  list-style-type: none;
+  gap: 10px;
+  margin-right: 100px;
+  margin-bottom: 20px;
 }
 
 .skills .holder-green .left-column ul li {
-    display: inline-block;
-    background-color: var(--second-bg-color);
-    color: var(--second-text-color);
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    cursor: default;
-    transition: all 0.2s ease;
+  display: inline-block;
+  background-color: var(--second-bg-color);
+  color: var(--second-text-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: default;
+  transition: all 0.2s ease;
 }
 
 #html {
-    background-color: #e44d25;
+  background-color: #e44d25;
 }
 
 #html:hover {
-   transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #css {
-    background-color: #214ce5;
+  background-color: #214ce5;
 }
 
 #css:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #bootstrap {
-    background-color: #7409f6;
+  background-color: #7409f6;
 }
 
 #bootstrap:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #javascript {
-    background-color: #f0db4f;
-    color: black;
+  background-color: #f0db4f;
+  color: black;
 }
 
 #javascript:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #python {
-    background-color: #f2bb30;
-    color: #34678e;
+  background-color: #f2bb30;
+  color: #34678e;
 }
 
 #python:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #django {
-    background-color: #092e20;
+  background-color: #092e20;
 }
 
 #django:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #sql {
-    background-color: #00bdf2;
+  background-color: #00bdf2;
 }
 
 #sql:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #postgresql {
-    background-color: #2f6792;
+  background-color: #2f6792;
 }
 
 #postgresql:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .skills .holder-green .right-column {
-    flex: 1;
-    color: black;
+  flex: 1;
+  color: black;
 }
 
 .skills .holder-green .right-column p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Splash screen */
 .intro {
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--bg-color);
-    transition: 2s;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color);
+  transition: 2s;
 }
 
 .intro-header {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--text-color);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-color);
 }
 
 .intro-text {
-    position: relative;
-    display: inline-block;
-    bottom: -20px;
-    opacity: 0;
-    margin-right: 10px;
-} 
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+  margin-right: 10px;
+}
 
 .intro-text.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
 }
 
 .intro-text.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
 }
 
 #bennett-intro {
-    background-image: linear-gradient(
+  background-image: linear-gradient(
     to right,
     var(--main-color),
     var(--second-color)
@@ -513,5 +520,3 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-
