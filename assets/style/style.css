@@ -41,7 +41,7 @@ html {
 }
 
 .logo {
-    color: var(--second-text-color);
+    color: var(--text-color);
     font-size: 30px;
     text-decoration: none;
     font-weight: 600;
@@ -60,7 +60,7 @@ html {
 }
 
 .navbar a {
-    color: var(--bg-color);
+    color: var(--text-color);
     font-size: 20px;
     text-decoration: none;
     margin-left: 20px;
@@ -75,10 +75,10 @@ html {
 
 #menu-icon {
     font-size: 30px;
-    background-image: linear-gradient(to right, var(--main-color), var(--second-color)); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    background-clip: text; 
+    background-image: linear-gradient(to right, var(--main-color), var(--second-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     display: none;
 }
 
@@ -94,20 +94,20 @@ html {
         left: 0;
         width: 100%;
         padding: 30px 120px;
-        /* glass effect */
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.25);
         display: none;
     }
 
     .navbar.active {
         display: block;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.5px);
+        -webkit-backdrop-filter: blur(14.5px);
     }
 
     .navbar a {
         display: block;
         margin: 30px 0;
-        
     }
 
     .navbar a:hover {
@@ -122,6 +122,10 @@ html {
 
     .navbar {
         padding: 10px 45px;
+        background: rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.5px);
+        -webkit-backdrop-filter: blur(14.5px);
     }
 
     .logo {
@@ -131,4 +135,135 @@ html {
     #menu-icon {
         font-size: 25px;
     }
+
 }
+
+/* Main content*/
+main {
+    margin-top: 135px;
+}
+
+.hero {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: var(--second-bg-color);
+    color: var(--second-text-color);
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--second-color);
+}
+
+.hero .hero-offwhite {
+    flex: 1;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+@media (max-width: 1024px) {
+    .hero .hero-offwhite span {
+        display: none;
+    }
+}
+
+.hero .hero-grey {
+    flex: 1;
+    /* background-color: var(--second-color); */
+    background: linear-gradient(to right, var(--main-color), var(--second-color));
+    border-radius: 30px;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-grey img {
+    max-width: 420px;
+}
+
+.call-to-action {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.call-to-action a {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: var(--text-color);
+    transition: all 0.2s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.social-links a:hover {
+    color: var(--second-color);
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+h1 small {
+    display: block;
+    font-weight: 70;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    #wave-emoji {
+        display: none;
+    }
+}
+
+
+
+
+
+
