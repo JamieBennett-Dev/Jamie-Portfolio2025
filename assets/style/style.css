@@ -161,12 +161,6 @@ main {
     margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        margin-top: -30px;
-    }
-}
-
 @media (max-width: 1440px) {
     .container {
         padding-left: 30px;
@@ -259,6 +253,44 @@ h1 small {
 @media (max-width: 768px) {
     #wave-emoji {
         display: none;
+    }
+}
+
+.logos {
+    background-color: var(--bg-color);
+    border-radius: 30px;
+    padding: 30px 0px;
+}
+
+@media (max-width: 1440px) {
+    .logos {
+        border-radius: 0;
+    }
+}
+
+.logos .marquee {
+    width: 100vw;
+    max-width: 100%;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos .marquee .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 300s linear infinite;
+    display: flex;
+    gap: 10px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
 
