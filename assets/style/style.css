@@ -59,6 +59,7 @@ html {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.5px);
   /* -webkit-backdrop-filter: blur(14.5px); */
+  z-index: 1000;
 }
 
 .logo {
@@ -129,6 +130,7 @@ html {
   .navbar.active {
     display: block;
     background: linear-gradient(to right, var(--main-color), var(--second-color));
+    z-index: 1000;
   }
 
   .navbar a {
@@ -321,4 +323,8 @@ h1 small {
   100% {
     transform: translateX(-100%);
   }
+}
+
+.logos .marquee .track img {
+    z-index: 0;
 }
