@@ -521,3 +521,72 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* jobs */
+/* .work-experience {
+} */
+
+.work-experience .jobs {
+  display: flex;
+  gap: 30px;
+}
+
+.work-experience article {
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: 30px;
+  flex: 1;
+}
+
+.work-experience article h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.work-experience article div {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.work-experience article p {
+  margin-bottom: 10px;
+}
+
+.work-experience article figure {
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+}
+
+.work-experience article figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1.5s ease;
+}
+
+.work-experience article figure img:hover {
+  transform: scale(1.1);
+}
+
+.work-experience article figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--second-text-color);
+  text-align: center;
+  padding: 10px;
+  font-size: large;
+}
+
+@media (max-width: 1024px) {
+  .work-experience .jobs {
+    flex-direction: column;
+  }
+}
