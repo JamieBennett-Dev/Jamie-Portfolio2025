@@ -595,6 +595,7 @@ h3 {
   grid-gap: 30px;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(4, 1fr);
+  height: 600px;
 }
 
 @media (max-width: 1024px) {
@@ -603,10 +604,40 @@ h3 {
   }
 }
 
+@media (max-width: 768px) {
+  .bento .bento-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
+}
+
 .bento .bento-grid .bento-item {
   padding: 30px;
   background-color: var(--bg-color);
-  border-radius: 30px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento .bento-grid .bento-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1.5s ease;
+}
+
+.bento .bento-grid .bento-item img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .bento .bento-grid .bento-item {
+    height: 240px;
+  }
 }
 
 .bento .bento-grid .bento-item:nth-child(1) {
